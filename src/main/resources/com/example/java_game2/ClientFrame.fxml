@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane prefHeight="520.0" prefWidth="750.0" styleClass="grid" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_game2.ClientPage">
+
+    <left>
+        <VBox fx:id="playersBox" alignment="CENTER" prefWidth="100" style="-fx-background-color: #FF4000;" styleClass="player-zone">
+        </VBox>
+
+    </left>
+    <center>
+        <Pane fx:id="gamePane" style="-fx-border-color: #000000;" styleClass="with-borders" xmlns="http://javafx.com/javafx/11.0.2">
+            <Line endX="500.0" endY="417.8000183105469" layoutX="-169.0" layoutY="1.0" opacity="0.7" startX="500.0" startY="1.5258789289873675E-6" stroke="black" strokeLineCap="BUTT" strokeWidth="2.0" />
+            <Line endX="650.0" endY="418.3999938964844" layoutX="-241.0" opacity="0.7" startX="650.0" stroke="black" strokeLineCap="BUTT" strokeWidth="2.0" />
+
+        </Pane>
+    </center>
+    <right>
+        <VBox fx:id="infoBox" alignment="TOP_CENTER" prefHeight="420.0" prefWidth="182.0" style="-fx-border-color: #000000;">
+        </VBox>
+    </right>
+    <bottom>
+        <HBox alignment="CENTER_LEFT" prefHeight="100" prefWidth="749.0" spacing="20" style="-fx-border-color: #000000;" styleClass="with-padding">
+            <Button onMouseClicked="#onReady" styleClass="btn" text="готов" />
+            <Button onMouseClicked="#onPause" styleClass="btn" text="остановить игру" />
+            <Button onMouseClicked="#onShoot" styleClass="btn" text="выстрел" />
+         <Button mnemonicParsing="false" onMouseClicked="#onScoreTable" styleClass="btn" text="таблица лидеров" />
+        </HBox>
+    </bottom>
+</BorderPane>
